@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Season Rankings (Non-PPR) — Standard Issue</title>
+  <meta name="description" content="Fantasy football rankings and resources for standard (non-PPR) scoring leagues.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">Standard Issue</a>
+      <nav>
+        <a href="./">This Week</a>
+        <a href="rankings.html" aria-current="page">Rankings</a>
+        <a href="#scoring">Scoring</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Fantasy football · <span id="season">2026</span> · Non-PPR</p>
+      <h1>Positional rankings, scoring and strategy.</h1>
+      <p class="lede">Standard scoring rewards yards and touchdowns, not receptions. Every list here is built for that. For this week's start/sit board, see the <a href="./">flex rankings</a>.</p>
+    </section>
+
+    <section id="rankings" class="block">
+      <div class="block-head">
+        <h2>Rankings</h2>
+        <p class="meta" id="meta">Loading…</p>
+      </div>
+
+      <div class="controls">
+        <div class="tabs" role="tablist" aria-label="Position">
+          <button role="tab" data-pos="ALL" aria-selected="true">Overall</button>
+          <button role="tab" data-pos="QB">QB</button>
+          <button role="tab" data-pos="RB">RB</button>
+          <button role="tab" data-pos="WR">WR</button>
+          <button role="tab" data-pos="TE">TE</button>
+        </div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Search player" aria-label="Search player">
+          <select id="team" aria-label="Filter by team"><option value="">All teams</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="num">Rank</th>
+              <th>Player</th>
+              <th class="pos-col">Pos</th>
+              <th>Team</th>
+              <th class="num">Bye</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="empty" id="empty" hidden>No players match.</p>
+      </div>
+    </section>
+
+    <section id="scoring" class="block">
+      <div class="block-head"><h2>Standard Scoring</h2><p class="meta">Typical default settings — check your league</p></div>
+      <div class="table-wrap">
+        <table class="scoring">
+          <thead><tr><th>Stat</th><th class="num">Points</th></tr></thead>
+          <tbody>
+            <tr><td>Passing yards</td><td class="num">1 per 25</td></tr>
+            <tr><td>Passing touchdown</td><td class="num">4</td></tr>
+            <tr><td>Interception thrown</td><td class="num">−2</td></tr>
+            <tr><td>Rushing / receiving yards</td><td class="num">1 per 10</td></tr>
+            <tr><td>Rushing / receiving touchdown</td><td class="num">6</td></tr>
+            <tr><td>Reception</td><td class="num">0</td></tr>
+            <tr><td>Fumble lost</td><td class="num">−2</td></tr>
+            <tr><td>Two-point conversion</td><td class="num">2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="playbook" class="block">
+      <div class="block-head"><h2>Non-PPR Playbook</h2><p class="meta">How standard changes the math</p></div>
+      <div class="cards">
+        <article>
+          <h3>Volume backs win</h3>
+          <p>Early-down carries and goal-line work are where the points live. A 20-carry back with no receiving role holds his value; in PPR he'd slide.</p>
+        </article>
+        <article>
+          <h3>Slot receivers sink</h3>
+          <p>High-catch, low-yardage receivers lose their floor. Favor receivers who win downfield or in the red zone.</p>
+        </article>
+        <article>
+          <h3>Touchdowns swing weeks</h3>
+          <p>With no reception cushion, scores make up a bigger share of every line. Expect more boom-and-bust — plan your bench for it.</p>
+        </article>
+        <article>
+          <h3>Tight ends are thin</h3>
+          <p>Outside the top few, most tight ends are touchdown-or-nothing. Lock in a reliable one or stream the matchups.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Rankings source: <a id="source-link" href="#" target="_blank" rel="noopener">—</a>. For fun, not financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="assets/season.js"></script>
+</body>
+</html>

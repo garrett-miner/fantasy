@@ -115,3 +115,12 @@ td.team { font-family: var(--mono); color: var(--muted); }
   td, th { padding: 10px 8px; }
   .pos-col, td.poscell { display: none; }
 }
+
+/* Weekly page additions */
+nav a[aria-current="page"] { color: var(--text); }
+.sub { font: 400 12px var(--mono); color: var(--muted); margin-left: 6px; }
+.day { font: 500 11px var(--mono); color: var(--muted); }
+.day.early { color: var(--accent); }
+.note { font: 12px var(--mono); color: var(--muted); margin: 14px 0 0; }
+.lede a { color: var(--text); }
+@media (max-width: 600px) { .game-col { display: none; } }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Standard Issue — Non-PPR Fantasy Football Rankings</title>
-  <meta name="description" content="Fantasy football rankings and resources for standard (non-PPR) scoring leagues.">
+  <title>Standard Issue — Weekly Flex Rankings (Non-PPR)</title>
+  <meta name="description" content="This week's fantasy football flex rankings (RB/WR/TE) for standard, non-PPR leagues.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -13,32 +13,31 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#rankings">Standard Issue</a>
+      <a class="brand" href="./">Standard Issue</a>
       <nav>
-        <a href="#rankings">Rankings</a>
-        <a href="#scoring">Scoring</a>
-        <a href="#playbook">Playbook</a>
+        <a href="./" aria-current="page">This Week</a>
+        <a href="rankings.html">Rankings</a>
+        <a href="rankings.html#scoring">Scoring</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <section class="hero">
-      <p class="eyebrow">Fantasy football · <span id="season">2026</span> · Non-PPR</p>
-      <h1>Rankings for leagues where a catch is just a catch.</h1>
-      <p class="lede">Standard scoring rewards yards and touchdowns, not receptions. Every list here is built for that.</p>
+      <p class="eyebrow"><span id="eyebrow">This week</span> · Non-PPR</p>
+      <h1 id="headline">Flex rankings</h1>
+      <p class="lede">Every RB, WR and TE ranked against each other for this week's games. Standard scoring only — a catch is just a catch.</p>
     </section>
 
-    <section id="rankings" class="block">
+    <section id="flex" class="block">
       <div class="block-head">
-        <h2>Rankings</h2>
+        <h2>Flex · RB / WR / TE</h2>
         <p class="meta" id="meta">Loading…</p>
       </div>
 
       <div class="controls">
         <div class="tabs" role="tablist" aria-label="Position">
-          <button role="tab" data-pos="ALL" aria-selected="true">Overall</button>
-          <button role="tab" data-pos="QB">QB</button>
+          <button role="tab" data-pos="FLEX" aria-selected="true">All</button>
           <button role="tab" data-pos="RB">RB</button>
           <button role="tab" data-pos="WR">WR</button>
           <button role="tab" data-pos="TE">TE</button>
@@ -57,54 +56,15 @@
               <th>Player</th>
               <th class="pos-col">Pos</th>
               <th>Team</th>
-              <th class="num">Bye</th>
+              <th>Opp</th>
+              <th class="num game-col">Game</th>
             </tr>
           </thead>
           <tbody id="rows"></tbody>
         </table>
         <p class="empty" id="empty" hidden>No players match.</p>
       </div>
-    </section>
-
-    <section id="scoring" class="block">
-      <div class="block-head"><h2>Standard Scoring</h2><p class="meta">Typical default settings — check your league</p></div>
-      <div class="table-wrap">
-        <table class="scoring">
-          <thead><tr><th>Stat</th><th class="num">Points</th></tr></thead>
-          <tbody>
-            <tr><td>Passing yards</td><td class="num">1 per 25</td></tr>
-            <tr><td>Passing touchdown</td><td class="num">4</td></tr>
-            <tr><td>Interception thrown</td><td class="num">−2</td></tr>
-            <tr><td>Rushing / receiving yards</td><td class="num">1 per 10</td></tr>
-            <tr><td>Rushing / receiving touchdown</td><td class="num">6</td></tr>
-            <tr><td>Reception</td><td class="num">0</td></tr>
-            <tr><td>Fumble lost</td><td class="num">−2</td></tr>
-            <tr><td>Two-point conversion</td><td class="num">2</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="playbook" class="block">
-      <div class="block-head"><h2>Non-PPR Playbook</h2><p class="meta">How standard changes the math</p></div>
-      <div class="cards">
-        <article>
-          <h3>Volume backs win</h3>
-          <p>Early-down carries and goal-line work are where the points live. A 20-carry back with no receiving role holds his value; in PPR he'd slide.</p>
-        </article>
-        <article>
-          <h3>Slot receivers sink</h3>
-          <p>High-catch, low-yardage receivers lose their floor. Favor receivers who win downfield or in the red zone.</p>
-        </article>
-        <article>
-          <h3>Touchdowns swing weeks</h3>
-          <p>With no reception cushion, scores make up a bigger share of every line. Expect more boom-and-bust — plan your bench for it.</p>
-        </article>
-        <article>
-          <h3>Tight ends are thin</h3>
-          <p>Outside the top few, most tight ends are touchdown-or-nothing. Lock in a reliable one or stream the matchups.</p>
-        </article>
-      </div>
+      <p class="note" id="byes"></p>
     </section>
   </main>
 
